@@ -18,15 +18,27 @@ ESP32 #2 (DHT11)        ──┘                                     └─► 
 ## 2. Repository structure
 
 ```
+## 2. Repository structure
+
+```text
 iot-telemetry-g/
 ├── README.md
 ├── .gitignore
 ├── esp32/
-│   ├── esp32-01-water/esp32-01-water.ino
-│   └── esp32-02-dht11/esp32-02-dht11.ino
-├── gateway/          (pom.xml, src/main/java/com/tuguldur/gateway/MqttGateway.java)
-├── local-consumer/   (pom.xml, src/main/java/com/tuguldur/consumer/LocalMqttConsumer.java)
-└── azure-consumer/   (pom.xml, src/main/java/com/tuguldur/consumer/AzureConsumer.java)
+│   ├── esp32-01-water/
+│   │   └── esp32-01-water.ino
+│   └── esp32-02-dht11/
+│       └── esp32-02-dht11.ino
+├── gateway/
+│   ├── pom.xml
+│   └── src/main/java/com/tuguldur/gateway/MqttGateway.java
+├── local-consumer/
+│   ├── pom.xml
+│   └── src/main/java/com/tuguldur/consumer/LocalMqttConsumer.java
+└── azure-consumer/
+    ├── pom.xml
+    └── src/main/java/com/tuguldur/consumer/AzureConsumer.java
+```
 ```
 
 ## 3. Hardware
