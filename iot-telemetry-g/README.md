@@ -215,25 +215,3 @@ The Azure resources were deleted after testing as instructed by the teacher.
 ## 12. Security / secrets
 
 **Never commit** Wi-Fi passwords, MQTT credentials (if authentication is enabled later), Azure connection strings, shared access keys, certificates/private keys, or `.env` files containing secrets. The ESP32 sketches contain placeholders only; edit them locally and do not commit the edited versions. Azure credentials are only read from environment variables. `.gitignore` excludes `.env`, `.env.*`, `secrets.h` and `arduino_secrets.h`.
-
-## 13. G-level requirements mapping
-
-| Requirement | Where it is met |
-|---|---|
-| Two ESP32 devices | `esp32-01-water`, `esp32-02-dht11` |
-| Wi-Fi connectivity | Both sketches (`WiFi.begin`, `WIFI_STA`) |
-| MQTT telemetry | `PubSubClient` publish every 3 s |
-| Unique device IDs | `esp32-01`, `esp32-02` |
-| Topic structure | `iot/esp32-01/water`, `iot/esp32-02/temperature` |
-| JSON telemetry | `deviceId`, `measurement`, `value`, `unit`, `timestamp` |
-| Real sensor data | Water sensor (tested); DHT11 firmware (**not physically tested**) |
-| Raspberry Pi Mosquitto broker | Port 1883 (section 7) |
-| Gateway application | `gateway/` |
-| Azure IoT Hub forwarding | Gateway `DeviceClient` (tested; resources since deleted) |
-| Gateway Azure identity | `IOTHUB_DEVICE_CONNECTION_STRING`; ESP32s have none |
-| Local MQTT consumer | `local-consumer/` |
-| Azure consumer | `azure-consumer/` |
-| README / documentation | This file |
-| No secrets committed | Placeholders and environment variables only |
-
-No VG/BLE functionality is implemented.
