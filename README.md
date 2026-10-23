@@ -20,7 +20,6 @@ ESP32 #2 (DHT11)        ──┘                                     └─► 
 ```
 ## 2. Repository structure
 
-```text
 iot-telemetry-g/
 ├── README.md
 ├── .gitignore
@@ -39,7 +38,7 @@ iot-telemetry-g/
     ├── pom.xml
     └── src/main/java/com/tuguldur/consumer/AzureConsumer.java
 ```
-```
+
 
 ## 3. Hardware
 
