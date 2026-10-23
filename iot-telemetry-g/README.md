@@ -214,4 +214,6 @@ The Azure resources were deleted after testing as instructed by the teacher.
 
 ## 12. Security / secrets
 
-**Never commit** Wi-Fi passwords, MQTT credentials (if authentication is enabled later), Azure connection strings, shared access keys, certificates/private keys, or `.env` files containing secrets. The ESP32 sketches contain placeholders only; edit them locally and do not commit the edited versions. Azure credentials are only read from environment variables. `.gitignore` excludes `.env`, `.env.*`, `secrets.h` and `arduino_secrets.h`.
+The repository contains no real Wi-Fi passwords, MQTT credentials, Azure connection strings, shared access keys, certificates, or private keys.
+The ESP32 sketches use placeholders for Wi-Fi and MQTT configuration. Azure credentials are provided through environment variables when the applications are run.
+Secret-related files such as `.env`, `.env.*`, `secrets.h`, and `arduino_secrets.h` are excluded through `.gitignore`.
